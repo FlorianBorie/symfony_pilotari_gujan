@@ -44,29 +44,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/site/assets/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/public/css/app.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="webpack_encore.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/config/packages/webpack_encore.yaml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -93,9 +94,10 @@
         <option value="$PROJECT_DIR$/site/templates/site/sponsort.html.twig" />
         <option value="$PROJECT_DIR$/site/src/Controller/SiteController.php" />
         <option value="$PROJECT_DIR$/site/public/css/style.css" />
-        <option value="$PROJECT_DIR$/site/webpack.config.js" />
-        <option value="$PROJECT_DIR$/site/assets/css/app.css" />
         <option value="$PROJECT_DIR$/site/templates/site/home.html.twig" />
+        <option value="$PROJECT_DIR$/site/webpack.config.js" />
+        <option value="$PROJECT_DIR$/site/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/site/assets/css/app.css" />
         <option value="$PROJECT_DIR$/site/templates/base.html.twig" />
       </list>
     </option>
@@ -105,6 +107,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/site/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -209,11 +214,12 @@
       <path value="$PROJECT_DIR$/site/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/site/vendor/psr/container" />
       <path value="$PROJECT_DIR$/site/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/site/vendor/symfony/webpack-encore-pack" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="977" />
+    <option name="width" value="1124" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -232,19 +238,6 @@
               <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
               <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
@@ -289,9 +282,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\public" />
       <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\assets" />
       <recent name="D:\logiciel\xampp\htdocs\symfony_pilotari_gujan\site\templates\site" />
     </key>
   </component>
@@ -320,18 +315,18 @@
       <workItem from="1544000807421" duration="12375000" />
       <workItem from="1544023673572" duration="2183000" />
       <workItem from="1547023432260" duration="2889000" />
-      <workItem from="1547031836834" duration="2997000" />
+      <workItem from="1547031836834" duration="5026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20444000" />
+    <option name="totallyTimeSpent" value="22473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="0" width="899" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16912752" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30035758" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -340,7 +335,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.45726496" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.46253604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -535,13 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/templates/site/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -556,17 +544,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/site/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="221">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/public/build/js/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/public/build/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/assets/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/public/build/entrypoints.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/config/packages/webpack_encore.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>

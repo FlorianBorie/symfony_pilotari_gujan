@@ -103,6 +103,7 @@
       <path value="$PROJECT_DIR$/site/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/site/vendor/psr/container" />
       <path value="$PROJECT_DIR$/site/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/site/vendor/symfony/webpack-encore-pack" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

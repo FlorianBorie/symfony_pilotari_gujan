@@ -13,3 +13,9 @@ h1{
 .nav-link{
     font-size: 150%;
 }
+
+/*image*/
+#img{
+    height: 150px;
+    margin-left: 43%;
+}

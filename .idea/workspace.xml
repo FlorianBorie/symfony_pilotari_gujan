@@ -53,11 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="217">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VichUploaderBundle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/vendor/vich/uploader-bundle/VichUploaderBundle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="e#39#101#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,18 +98,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connexion.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/templates/site/connexion.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="30" selection-start-column="30" selection-end-column="30" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="competition.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/templates/site/competition.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,17 +110,17 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/public/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="323">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/webpack.config.js">
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="238">
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -152,15 +152,17 @@
         <option value="$PROJECT_DIR$/site/public/css/style.css" />
         <option value="$PROJECT_DIR$/site/webpack.config.js" />
         <option value="$PROJECT_DIR$/site/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/site/assets/css/app.css" />
         <option value="$PROJECT_DIR$/site/templates/site/home.html.twig" />
         <option value="$PROJECT_DIR$/site/templates/site/competition.html.twig" />
         <option value="$PROJECT_DIR$/site/templates/site/newsletter.html.twig" />
         <option value="$PROJECT_DIR$/site/templates/site/connexion.html.twig" />
         <option value="$PROJECT_DIR$/site/templates/site/sponsor.html.twig" />
         <option value="$PROJECT_DIR$/site/src/Controller/SiteController.php" />
-        <option value="$PROJECT_DIR$/site/public/css/app.css" />
+        <option value="$PROJECT_DIR$/site/vendor/vich/uploader-bundle/VichUploaderBundle.php" />
+        <option value="$PROJECT_DIR$/site/assets/css/app.css" />
         <option value="$PROJECT_DIR$/site/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/site/public/css/app.css" />
+        <option value="$PROJECT_DIR$/site/.env" />
       </list>
     </option>
   </component>
@@ -277,12 +279,16 @@
       <path value="$PROJECT_DIR$/site/vendor/psr/container" />
       <path value="$PROJECT_DIR$/site/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/site/vendor/symfony/webpack-encore-pack" />
+      <path value="$PROJECT_DIR$/site/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/site/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/site/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/site/vendor/symfony/templating" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="1125" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -314,13 +320,6 @@
               <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
@@ -369,13 +368,14 @@
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\public\img" />
+      <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\assets" />
+      <recent name="D:\logiciel\xampp\htdocs\symfony_pilotari_gujan\site\templates\site" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\public" />
       <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site\assets" />
-      <recent name="D:\logiciel\xampp\htdocs\symfony_pilotari_gujan\site\templates\site" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -407,12 +407,12 @@
       <workItem from="1547540951752" duration="36000" />
       <workItem from="1548152912099" duration="658000" />
       <workItem from="1548230839463" duration="1978000" />
-      <workItem from="1548235320758" duration="3156000" />
+      <workItem from="1548235320758" duration="5666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29797000" />
+    <option name="totallyTimeSpent" value="32307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -423,7 +423,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4814815" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17785235" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3671141" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299712" />
@@ -445,36 +445,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/src/Controller/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="true" />
-            <element signature="e#314#336#0#PHP" expanded="true" />
-            <element signature="e#671#697#1#PHP" expanded="true" />
-            <element signature="e#836#864#1#PHP" expanded="true" />
-            <element signature="e#995#1019#1#PHP" expanded="true" />
-            <element signature="e#1157#1184#1#PHP" expanded="true" />
-            <element signature="e#1318#1344#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/templates/site/evenement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -739,13 +709,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/public/build/js/app.js" />
-    <entry file="file://$PROJECT_DIR$/site/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -777,16 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/templates/site/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/templates/site/evenement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -810,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/templates/site/newsletter.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -837,10 +783,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/site/public/img/logo.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/vendor/vich/uploader-bundle/VichUploaderBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#39#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/templates/site/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="217">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
         </state>
       </provider>
     </entry>

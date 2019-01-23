@@ -1,1 +1,76 @@
 {% extends 'base.html.twig' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion</title>
+</head>
+
+<body>
+<div><h1>Se connecter</h1></div>
+<form method="post">
+
+    <?php
+                if (isset($er_mail)){
+            ?>
+    <div><?= $er_mail ?></div>
+    <?php
+                }
+            ?>
+
+    <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+
+    <?php
+                if (isset($er_mdp)){
+            ?>
+    <div><?= $er_mdp ?></div>
+    <?php
+                }
+            ?>
+
+    <input type="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+
+    <button type="submit" name="connexion">Se connecter</button>
+
+</form>
+</body>
+{% endblock %}
+{% block php %}
+<?php
+// parametre de connexion
+$host_name = "localhost";
+$database = "ton_nom_de_bdd";
+$db_user_name = "root";
+$db_password = "ton_mdp";
+// connexion
+$conn = mysqli_connect($host_name, $db_user_name, $db_password, $database);
+
+// initialisation
+// recuperation et insertion
+if (isset($_POST['submit'])) {
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+         $check = mysqli_query( $conn, "SELECT email, password FROM user WHERE email = '$email' and password= '$password'");
+    if ( !$check ) {
+      printf("Message d'erreur : %s\n", mysqli_error($conn));
+}
+
+        $nb_rows = mysqli_num_rows($check);
+        if ($nb_rows > 0) {
+echo "user found";
+} else {
+echo "Wrong Login/password";
+}
+} else {
+echo 'Veuillez remplir tous les champs';
+}
+}
+?>
+{% endblock %}
+</html>

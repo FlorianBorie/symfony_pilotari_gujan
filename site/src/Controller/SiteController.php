@@ -59,4 +59,11 @@ class SiteController extends AbstractController
     public function connexion(){
         return $this->render('site/connexion.html.twig');
     }
+    /**
+     * @Route("/inscription", name="inscription")
+     */
+
+    public function inscription(){
+        return $this->render('site/inscription.html.twig');
+    }
 }

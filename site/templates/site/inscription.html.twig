@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscription</title>
+</head>
+
+<body>
+<div><h1>Inscription</h1></div>
+<form method="post">
+
+
+    <input type="text" placeholder="Votre nom" name="nom" value="<?php if(isset($nom)){ echo $nom; }?>" required>
+
+
+    <input type="text" placeholder="Votre prénom" name="prenom" value="<?php if(isset($prenom)){ echo $prenom; }?>" required>
+
+
+    <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+
+
+    <input type="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+    <input type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
+
+    <button type="submit" name="inscription">Envoyer</button>
+
+</form>
+
+
+</body>
+</html>
+{% endblock %}
+{% block php %}
+<?php
+
+if (isset($_POST['submit']))
+{
+
+$nom = htmlspecialchars(trim($_POST['nom']));
+$prenom = htmlspecialchars(trim($_POST['prenom']));
+$email = htmlspecialchars(trim($_POST['email']));
+$password = htmlspecialchars(trim($_POST['password']));
+$repeatpassword = htmlspecialchars(trim($_POST['repeatpassword']));
+
+if ($nom&&$prenom&&$email&&$password&&$repeatpassword)
+        {
+        if (strlen($password)>=6)
+{
+if ($password==$repeatpassword)
+{
+// On crypte le mot de passe
+$password = ($password);
+
+// on se connecte à MySQL et on sélectionne la base
+$c = new mysqli ("localhost","root","ton_mdp","ton_nom_de_bdd");
+
+//On créé la requête
+$sql = "INSERT INTO user VALUES ('$nom','$prenom','$email','$password')";
+
+// On envoie la requête
+$res = $c->query($sql);
+// on ferme la connexion
+mysqli_close($c);
+
+}else echo "Les mots de passe ne sont pas identiques";
+}else echo "Le mot de passe est trop court !";
+}else echo "Veuillez saisir tous les champs !";
+
+}
+
+?>
+{% endblock %}
+
+

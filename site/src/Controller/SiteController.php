@@ -39,10 +39,24 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/sponsort", name="sponsort")
+     * @Route("/sponsor", name="sponsor")
      */
 
-    public function sponsort(){
-        return $this->render('site/sponsort.html.twig');
+    public function sponsor(){
+        return $this->render('site/sponsor.html.twig');
+    }
+    /**
+     * @Route("/newsletter", name="newsletter")
+     */
+
+    public function newsletter(){
+        return $this->render('site/newsletter.html.twig');
+    }
+    /**
+     * @Route("/connexion", name="connexion")
+     */
+
+    public function connexion(){
+        return $this->render('site/connexion.html.twig');
     }
 }

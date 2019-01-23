@@ -4,3 +4,12 @@ body {
 h1{
      color: black;
 }
+
+/*Nav bar*/
+
+.nav-item{
+    margin-left: 45%;
+}
+.nav-link{
+    font-size: 150%;
+}

@@ -110,6 +110,8 @@
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/zendframework/zend-code" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/zendframework/zend-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/asset" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -6,7 +6,7 @@ h1{
 }
 .container{
     margin-top: 2%;
-    margin-left: 10%;
+    max-width: 100%;
 }
 /*Nav bar*/
 
@@ -25,14 +25,15 @@ h1{
 #img_mur{
 height: 180px;
 }
+#titre{
+    height: 165.5px;
+}
+
 #img{
     height: 180px;
-
 }
 
-#titre{
-    height: 172.6px;
-}
+
 
 /*slider*/
 .slideshow {
@@ -41,6 +42,7 @@ height: 180px;
     overflow: hidden;
     border: 3px solid #F2F2F2;
     margin-top: 5%;
+    margin-left: 10%;
 }
 
 .slideshow ul {
@@ -61,4 +63,18 @@ height: 180px;
 }
 .col-md-4 {
     margin-left: 5%;
+}
+#img_fb{
+    margin-left: 18%;
+}
+
+/*page sponsor*/
+#sponsor{
+    margin-left: 8%;
+}
+.img_sponsor{
+    width: 20%;
+    height: 300px;
+    margin-left: 2%;
+    margin-top: 3%;
 }

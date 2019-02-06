@@ -13,7 +13,15 @@
     {{ form_row(formProfil.mail, {'attr': {'placeholder': "Votre adresse mail"}}) }}
     {{ form_row(formProfil.password, {'attr': {'placeholder': "Votre mot de passe"}}) }}
 
-    <button type="submit" class="btn btn-info">Envoyer</button>
+    <button type="submit" class="btn btn-info">
+        {% if editMode %}
+            Modifier
+
+        {% else %}
+          Envoyer
+
+        {% endif %}
+    </button>
 
     {{ form_end(formProfil) }}
 

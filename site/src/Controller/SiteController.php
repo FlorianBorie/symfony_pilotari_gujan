@@ -10,12 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\Contacter;
 
 class SiteController extends AbstractController
@@ -84,14 +79,19 @@ class SiteController extends AbstractController
 
     /**
      * @Route("/inscription", name="inscription")
+     * @Route("/inscription/{id}/edit", name="inscription_edit")
+     * @param Profil $profil
      * @param Request $request
      * @param ObjectManager $manager
      * @return \Symfony\Component\HttpFoundation\Response
      */
 
-    public function inscription(Request $request, ObjectManager $manager)
+    public function form(Profil $profil = null, Request $request, ObjectManager $manager)
     {
-        $profil = new Profil();
+
+        if(!$profil) {
+            $profil = new Profil();
+        }
 
         $form = $this->createFormBuilder($profil)
             ->add('nom')
@@ -105,17 +105,21 @@ class SiteController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()) {
 
+            if(!$profil->getId()){
+
+            }
             $manager->persist($profil);
             $manager->flush();
 
-            return $this->redirectToRoute('attente.html.twig',);
+            return $this->redirectToRoute('attente.html.twig', ['id' => $profil->getId()]);
         }
 
 
 
 
         return $this->render('site/inscription.html.twig',[
-            'formProfil' => $form->createView()
+            'formProfil' => $form->createView(),
+            'editMode' => $profil->getId() !== null
         ]);
     }
 

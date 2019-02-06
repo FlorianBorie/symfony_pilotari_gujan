@@ -2,8 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Profil;
+use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SiteController extends AbstractController
@@ -72,12 +77,41 @@ class SiteController extends AbstractController
 
     /**
      * @Route("/inscription", name="inscription")
+     * @param Request $request
+     * @param ObjectManager $manager
+     * @return \Symfony\Component\HttpFoundation\Response
      */
 
-    public function inscription()
+    public function inscription(Request $request, ObjectManager $manager)
     {
-        return $this->render('site/inscription.html.twig');
+        $profil = new Profil();
+
+        $form = $this->createFormBuilder($profil)
+            ->add('nom')
+            ->add('prenom')
+            ->add('mail', EmailType::class)
+            ->add('password')
+
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+
+            $manager->persist($profil);
+            $manager->flush();
+
+            return $this->redirectToRoute('attente.html.twig',);
+        }
+
+
+
+
+        return $this->render('site/inscription.html.twig',[
+            'formProfil' => $form->createView()
+        ]);
     }
+
     /**
      * @Route("/contacter", name="contacter")
      */
@@ -85,4 +119,6 @@ class SiteController extends AbstractController
     public function contacter(){
         return $this->render('site/contacter.html.twig');
     }
+
+
 }

@@ -10,6 +10,13 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Doctrine\Common\Persistence\ObjectManager;
+use App\Entity\Contacter;
 
 class SiteController extends AbstractController
 {
@@ -116,8 +123,32 @@ class SiteController extends AbstractController
      * @Route("/contacter", name="contacter")
      */
 
-    public function contacter(){
-        return $this->render('site/contacter.html.twig');
+    public function contacter(Request $request, ObjectManager $manager){
+        $contacter = new Contacter();
+
+        $form = $this->createFormBuilder($contacter)
+            ->add('nom')
+            ->add('mail')
+            ->add('objet')
+            ->add('message')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+        }
+
+        return $this->render('site/contacter.html.twig',[
+            'formContacter' => $form->createView()
+        ]);
+    }
+    /**
+     * @Route("/attente", name="attente")
+     */
+
+    public function attente(){
+        return $this->render('site/attente.html.twig');
     }
 
 

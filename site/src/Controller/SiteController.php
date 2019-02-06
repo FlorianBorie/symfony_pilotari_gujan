@@ -11,11 +11,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-<<<<<<< HEAD
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Doctrine\Common\Persistence\ObjectManager;
-=======
->>>>>>> master
 use App\Entity\Contacter;
 
 class SiteController extends AbstractController

@@ -18,21 +18,25 @@ class Contacter
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string|null
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string|null
      */
     private $mail;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string|null
      */
     private $objet;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string|null
      */
     private $message;
 

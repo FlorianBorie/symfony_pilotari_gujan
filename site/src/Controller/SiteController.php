@@ -8,13 +8,35 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\Contacter;
 
 class SiteController extends AbstractController
 {
+    /**
+     * @var \Swift_Mailer
+     */
+    private $mailer;
+
+    //Recuperation par injection du Swift_Mailer
+    public function __construct(\Swift_Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+    public function contacterMail(Contacter $contacter)
+    {
+        // New mail
+        $message = (new \Swift_Message('Nous contacter : '))
+            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setTo('flo.borie33@gmail.com')
+            ->setBody($this->renderView('site/attenteMail.html.twig', [
+                'contacter' => $contacter
+            ]), 'text/html');
+        // Sent email
+        $this->mailer->send($message);
+    }
+
     /**
      * @Route("/site", name="site")
      */
@@ -103,6 +125,9 @@ class SiteController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
+            $this -> contacterMail($contacter);
+
+            return $this->redirect('/attente');
         }
 
         return $this->render('site/contacter.html.twig',[
@@ -113,7 +138,8 @@ class SiteController extends AbstractController
      * @Route("/attente", name="attente")
      */
 
-    public function attente(){
+    public function attente()
+    {
         return $this->render('site/attente.html.twig');
     }
 }

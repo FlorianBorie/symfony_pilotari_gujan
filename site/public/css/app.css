@@ -4,18 +4,77 @@ body {
 h1{
      color: black;
 }
-
+.container{
+    margin-top: 2%;
+    max-width: 100%;
+}
 /*Nav bar*/
 
 .nav-item{
-    margin-left: 45%;
+    margin-left: 8%;
 }
 .nav-link{
     font-size: 150%;
+    width: 160px;
 }
 
 /*image*/
+#header{
+    background-color: black;
+}
+#img_mur{
+height: 180px;
+}
+#titre{
+    height: 165.5px;
+}
+
 #img{
-    height: 150px;
-    margin-left: 43%;
+    height: 180px;
+}
+
+
+
+/*slider*/
+.slideshow {
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    border: 3px solid #F2F2F2;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.slideshow ul {
+    /* 4 images donc 4 x 100% */
+    width: 400%;
+    height: 700px;
+    padding:0; margin:0;
+    list-style: none;
+}
+.slideshow li {
+    float: left;
+}
+/*Footer*/
+
+.footer{
+    background-color: red;
+    margin-top: 5%;
+}
+.col-md-4 {
+    margin-left: 5%;
+}
+#img_fb{
+    margin-left: 18%;
+}
+
+/*page sponsor*/
+#sponsor{
+    margin-left: 8%;
+}
+.img_sponsor{
+    width: 20%;
+    height: 300px;
+    margin-left: 2%;
+    margin-top: 3%;
 }

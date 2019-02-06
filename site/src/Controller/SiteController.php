@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -27,13 +28,16 @@ class SiteController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function home(){
+    public function home()
+    {
         return $this->render(('site/home.html.twig'));
     }
+
     /**
      * @Route("/evenement", name="evenement")
      */
-    public function evenement(){
+    public function evenement()
+    {
         return $this->render('site/evenement.html.twig');
     }
 
@@ -41,7 +45,8 @@ class SiteController extends AbstractController
      * @Route("/competition", name="competition")
      */
 
-    public function competion(){
+    public function competion()
+    {
         return $this->render('site/competition.html.twig');
     }
 
@@ -49,28 +54,35 @@ class SiteController extends AbstractController
      * @Route("/sponsor", name="sponsor")
      */
 
-    public function sponsor(){
+    public function sponsor()
+    {
         return $this->render('site/sponsor.html.twig');
     }
+
     /**
      * @Route("/newsletter", name="newsletter")
      */
 
-    public function newsletter(){
+    public function newsletter()
+    {
         return $this->render('site/newsletter.html.twig');
     }
+
     /**
      * @Route("/connexion", name="connexion")
      */
 
-    public function connexion(){
+    public function connexion()
+    {
         return $this->render('site/connexion.html.twig');
     }
+
     /**
      * @Route("/inscription", name="inscription")
      */
 
-    public function inscription(){
+    public function inscription()
+    {
         return $this->render('site/inscription.html.twig');
     }
     /**

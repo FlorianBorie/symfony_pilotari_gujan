@@ -2,14 +2,20 @@
 
 namespace App\Controller;
 
+use App\Entity\Profil;
+use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+<<<<<<< HEAD
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Doctrine\Common\Persistence\ObjectManager;
+=======
+>>>>>>> master
 use App\Entity\Contacter;
 
 class SiteController extends AbstractController
@@ -101,12 +107,50 @@ class SiteController extends AbstractController
 
     /**
      * @Route("/inscription", name="inscription")
+     * @Route("/inscription/{id}/edit", name="inscription_edit")
+     * @param Profil $profil
+     * @param Request $request
+     * @param ObjectManager $manager
+     * @return \Symfony\Component\HttpFoundation\Response
      */
 
-    public function inscription()
+    public function form(Profil $profil = null, Request $request, ObjectManager $manager)
     {
-        return $this->render('site/inscription.html.twig');
+
+        if(!$profil) {
+            $profil = new Profil();
+        }
+
+        $form = $this->createFormBuilder($profil)
+            ->add('nom')
+            ->add('prenom')
+            ->add('mail', EmailType::class)
+            ->add('password')
+
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+
+            if(!$profil->getId()){
+
+            }
+            $manager->persist($profil);
+            $manager->flush();
+
+            return $this->redirectToRoute('attente.html.twig', ['id' => $profil->getId()]);
+        }
+
+
+
+
+        return $this->render('site/inscription.html.twig',[
+            'formProfil' => $form->createView(),
+            'editMode' => $profil->getId() !== null
+        ]);
     }
+
     /**
      * @Route("/contacter", name="contacter")
      */
@@ -142,4 +186,6 @@ class SiteController extends AbstractController
     {
         return $this->render('site/attente.html.twig');
     }
+
+
 }

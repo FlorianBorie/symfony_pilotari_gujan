@@ -1,12 +1,32 @@
 {% extends 'base.html.twig' %}
 
-
+{% form_theme formProfil 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
 
     <h1>Inscription</h1>
 
+    {{ form_start(formProfil) }}
+
+    {{ form_row(formProfil.nom, {'attr': {'placeholder': "Votre nom"}}) }}
+    {{ form_row(formProfil.prenom, {'attr': {'placeholder': "Votre prénom"}}) }}
+    {{ form_row(formProfil.mail, {'attr': {'placeholder': "Votre adresse mail"}}) }}
+    {{ form_row(formProfil.password, {'attr': {'placeholder': "Votre mot de passe"}}) }}
+
+    <button type="submit" class="btn btn-info">
+        {% if editMode %}
+            Modifier
+
+        {% else %}
+          Envoyer
+
+        {% endif %}
+    </button>
+
+    {{ form_end(formProfil) }}
+
 {% endblock %}
+
 
 
 

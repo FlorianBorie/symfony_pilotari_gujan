@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Profil;
+
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Contacter;
+use App\Entity\Profil;
 
 class SiteController extends AbstractController
 {
@@ -31,8 +32,21 @@ class SiteController extends AbstractController
         $message = (new \Swift_Message('Nous contacter : '))
             ->setFrom('noreply@pilotari_gujan.fr')
             ->setTo('flo.borie33@gmail.com')
-            ->setBody($this->renderView('site/attenteMail.html.twig', [
+            ->setBody($this->renderView('site/contacter_mail.html.twig', [
                 'contacter' => $contacter
+            ]), 'text/html');
+        // Sent email
+        $this->mailer->send($message);
+    }
+
+    public function mail_profil(Profil $profil)
+    {
+        // New mail
+        $message = (new \Swift_Message('Le proil du nouveau inscrit : '))
+            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setTo('flo.borie33@gmail.com')
+            ->setBody($this->renderView('site/mail_profil.html.twig', [
+                'profil' => $profil
             ]), 'text/html');
         // Sent email
         $this->mailer->send($message);
@@ -92,61 +106,6 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/connexion", name="connexion")
-     */
-
-    public function connexion()
-    {
-        return $this->render('site/connexion.html.twig');
-    }
-
-    /**
-     * @Route("/inscription", name="inscription")
-     * @Route("/inscription/{id}/edit", name="inscription_edit")
-     * @param Profil $profil
-     * @param Request $request
-     * @param ObjectManager $manager
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-
-    public function form(Profil $profil = null, Request $request, ObjectManager $manager)
-    {
-
-        if(!$profil) {
-            $profil = new Profil();
-        }
-
-        $form = $this->createFormBuilder($profil)
-            ->add('nom')
-            ->add('prenom')
-            ->add('mail', EmailType::class)
-            ->add('password')
-
-            ->getForm();
-
-        $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid()) {
-
-            if(!$profil->getId()){
-
-            }
-            $manager->persist($profil);
-            $manager->flush();
-
-            return $this->redirectToRoute('attente.html.twig', ['id' => $profil->getId()]);
-        }
-
-
-
-
-        return $this->render('site/inscription.html.twig',[
-            'formProfil' => $form->createView(),
-            'editMode' => $profil->getId() !== null
-        ]);
-    }
-
-    /**
      * @Route("/contacter", name="contacter")
      */
 
@@ -155,7 +114,7 @@ class SiteController extends AbstractController
 
         $form = $this->createFormBuilder($contacter)
             ->add('nom')
-            ->add('mail')
+            ->add('mail', EmailType::class)
             ->add('objet')
             ->add('message')
             ->getForm();
@@ -165,6 +124,9 @@ class SiteController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
 
             $this -> contacterMail($contacter);
+
+            $manager->persist($contacter);
+            $manager->flush();
 
             return $this->redirect('/attente');
         }

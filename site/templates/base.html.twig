@@ -2,17 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Pilotari de Gujan-Mestras{% endblock %}</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
     {% block stylesheets %}
     {% endblock %}
 </head>
 <body>
 <div id="header">
-    <img id="img_mur" src="../img/image_joueurs_de_pelote.jpg">
-    <img id="titre" src="../img/titre.png">
-    <img id="img" src="../img/logo.jpg">
+    <img id="img_mur" src="../img/logo.jpg">
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +21,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li id="navBar" class="nav-item">
                 <a class="nav-link" href="{{ path('home') }}">Accueil</a>
             </li>
             <li class="nav-item">
@@ -47,73 +48,75 @@
 
 <div class="footer">
     {% block footer %}
-        <div class="footer">
-            <!-- Footer -->
-            <footer class="page-footer font-small blue pt-4">
 
-                <!-- Footer Links -->
-                <div class="container-fluid text-center text-md-left">
+        <!-- Footer -->
+        <footer class="page-footer font-small blue pt-4">
 
-                    <!-- Grid row -->
-                    <div class="row">
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
 
-                        <!-- Grid column -->
-                        <div class="col-md-4 mt-md-0 mt-3">
+                <!-- Grid row -->
+                <div class="row">
 
-                            <!-- Content -->
-                            <h5 class="text-uppercase">Adresse :</h5>
-                            <p>60 Allée Edouard Branly</p><p>33470 Gujan-Mestras</p>
+                    <!-- Grid column -->
+                    <div class="col-md-3 mt-md-0 mt-2">
 
-                        </div>
-                        <!-- Grid column -->
+                        <!-- Content -->
+                        <h5 class="text-uppercase">Adresse :</h5>
+                        <p>60 Allée Edouard Branly</p><p>33470 Gujan-Mestras</p>
+                    </div>
+                    <!-- Grid column -->
 
-                        <hr class="clearfix w-100 d-md-none pb-3">
+                    <hr class="clearfix w-100 d-md-none pb-3">
 
-                        <!-- Grid column -->
-                        <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Grid column -->
+                    <div class="col-md-4 mb-md-0 mb-3">
 
-                            <!-- Links -->
-                            <h5 class="text-uppercase">Nous contacter avec :</h5>
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Nous contacter avec :</h5>
 
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="https://www.facebook.com"><img id="img_fb" src="../img/Facebook-02.png"></a>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 mb-md-0 mb-3">
-
-                            <!-- Links -->
-                            <h5 class="text-uppercase">MAil : florian.borie@ynov.com</h5>
-
-                            <ul class="list-unstyled">
-                                <li>
-                                    <p>TEL : 05 56 66 79 92</p>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <!-- Grid column -->
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.facebook.com/Pilotari.Gujanais/"><img id="img_fb" src="../img/Facebook-02.png"></a>
+                            </li>
+                        </ul>
 
                     </div>
-                    <!-- Grid row -->
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">MAil : florian.borie@ynov.com</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <p>TEL : 05 56 66 79 92</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
 
                 </div>
-                <!-- Footer Links -->
+                <!-- Grid row -->
 
-                <!-- Copyright -->
-                <div class="footer-copyright text-center py-3">© 2018 Copyright
-                </div>
-                <!-- Copyright -->
+            </div>
+            <!-- Footer Links -->
 
-            </footer>
-            <!-- Footer -->
-        </div>{% endblock %}
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    {% endblock %}
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 {% block javascripts %}{% endblock %}
 

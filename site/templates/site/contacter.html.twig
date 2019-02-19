@@ -9,6 +9,7 @@
         <p>TEL : 05 56 66 79 92</p>
         <p>@ : TOTO@hotmail.fr</p>
     </div>
+    <h1>Nous contacter</h1>
     {{ form_start(formContacter) }}
 
     {{ form_row(formContacter.nom, {'attr' : {'placeholder': "Mettez vôtre nom"}}) }}
@@ -20,5 +21,4 @@
     {{ form_widget(formContacter) }}
 
     {{ form(formContacter) }}
-
 {% endblock %}

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/symfony_pilotari_gujan.iml" filepath="$PROJECT_DIR$/.idea/symfony_pilotari_gujan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pelote_gujan.iml" filepath="$PROJECT_DIR$/.idea/pelote_gujan.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,3 @@
+comment faire pour mettre deux formulaire sur la même page et que dans le mail nous pouvons 
+valider la demande d'inscritoon ou pas et ajouter des nouveaux onglets dans le menu
+pour le calendrier le mieux urilier une api ou le faire nous même

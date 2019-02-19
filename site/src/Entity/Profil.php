@@ -3,11 +3,18 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProfilRepository")
+ * @UniqueEntity(
+ * fields={"mail"},
+ * message="L'email que vous avez indiqué est déjà utilisé !"
+ * )
  */
-class Profil
+class Profil implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -19,48 +26,57 @@ class Profil
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $prenom;
+    private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $mail;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimun 8 caractères")
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Vous n'avez pas tapé le même mot de passe ")
+     */
+    public  $confirm_password;
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+
+    public function getUsername(): ?string
     {
-        return $this->nom;
+        return $this->username;
     }
 
-    public function setNom(string $nom): self
+    public function setUsername(string $username): self
     {
-        $this->nom = $nom;
+        $this->username = $username;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
+    public function getLastname(): ?string
     {
-        return $this->prenom;
+        return $this->lastname;
     }
 
-    public function setPrenom(string $prenom): self
+    public function setLastname(string $lastname): self
     {
-        $this->prenom = $prenom;
+        $this->lastname = $lastname;
 
         return $this;
     }
@@ -87,5 +103,14 @@ class Profil
         $this->password = $password;
 
         return $this;
+    }
+
+    public function eraseCredentials() {}
+
+    public function getSalt() {}
+
+    public function getRoles()
+    {
+        return ['ROLE_PROFIL'];
     }
 }

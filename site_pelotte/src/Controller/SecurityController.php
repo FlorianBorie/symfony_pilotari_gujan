@@ -31,7 +31,7 @@ class SecurityController extends AbstractController
         // New mail
         $message = (new \Swift_Message('Nouvelle demande de connexion sur le site du pilotari : '))
             ->setFrom('noreply@pilotari_gujan.fr')
-            ->setTo('flo.borie33@gmail.com')
+            ->setTo('contact@pilotari_gujan.fr')
             ->setBody($this->renderView('site/mail_profil.html.twig', [
                 'profil' => $profil
             ]), 'text/html');

@@ -31,7 +31,7 @@ class SiteController extends AbstractController
         // New mail
         $message = (new \Swift_Message('Nous contacter : '))
             ->setFrom('noreply@pilotari_gujan.fr')
-            ->setTo('flo.borie33@gmail.com')
+            ->setTo('contact@pilotari_gujan.fr')
             ->setBody($this->renderView('site/contacter_mail.html.twig', [
                 'contacter' => $contacter
             ]), 'text/html');

@@ -19,6 +19,21 @@ class ProfilRepository extends ServiceEntityRepository
         parent::__construct($registry, Profil::class);
     }
 
+    public function isProfilExist($email)
+    {
+        $qb = $this->createQueryBuilder('p')
+            ->where('p.mail = :email')
+            ->setParameter('email', $email)
+            ->getQuery()
+            ->getResult();
+
+        if (!empty($qb)) {
+            return true;
+        }
+
+        return false;
+    }
+
     // /**
     //  * @return Profil[] Returns an array of Profil objects
     //  */

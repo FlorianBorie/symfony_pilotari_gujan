@@ -30,7 +30,7 @@ class SiteController extends AbstractController
     {
         // New mail
         $message = (new \Swift_Message('Nous contacter : '))
-            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setFrom('flo.borie33@gmail.com')
             ->setTo('contact@pilotari_gujan.fr')
             ->setBody($this->renderView('site/contacter_mail.html.twig', [
                 'contacter' => $contacter
@@ -96,7 +96,6 @@ class SiteController extends AbstractController
     /**
      * @Route("/newsletter", name="newsletter")
      */
-
     public function newsletter()
     {
         return $this->render('site/newsletter.html.twig');
@@ -105,7 +104,6 @@ class SiteController extends AbstractController
     /**
      * @Route("/contacter", name="contacter")
      */
-
     public function contacter(Request $request, ObjectManager $manager)
     {
         $contacter = new Contacter();

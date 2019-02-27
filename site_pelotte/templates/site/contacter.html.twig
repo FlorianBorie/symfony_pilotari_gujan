@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% form_theme formContacter  'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-success flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div id="coordonées">
+        <p>Coordonées :</p>
+        <p>Association du pilotari gujannais</p>
+        <p>60 allée Edouard Branly</p>
+        <p>33470 Gujan-Mestras</p>
+        <p>TEL : 05 56 66 79 92</p>
+        <p>@ : TOTO@hotmail.fr</p>
+    </div>
+    <h1>Nous contacter</h1>
+    {{ form_start(formContacter) }}
+
+    {{ form_row(formContacter.nom, {'attr' : {'placeholder': "Mettez vôtre nom"}}) }}
+    {{ form_row(formContacter.mail, {'attr' : {'placeholder': "Mettez vôtre mail"}}) }}
+    {{ form_row(formContacter.objet, {'attr' : {'placeholder': "Ecrire l'obget de vôtre message"}}) }}
+    {{ form_row(formContacter.message, {'attr' : {'placeholder': "Ecrire vôtre message"}}) }}
+
+    <button type="submit" class="btn btn-info">Envoyer</button>
+    {{ form_widget(formContacter) }}
+
+    {{ form(formContacter) }}
+{% endblock %}

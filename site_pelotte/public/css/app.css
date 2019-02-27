@@ -102,7 +102,6 @@ h1{
         display: inline-block;
     }
 
-
 }
 @media only screen and (max-width: 1170px){
     .img_slider_responsive{
@@ -116,21 +115,23 @@ h1{
     }
 }
 
-@media only screen and (max-width: 992px){
-    .img_slider_responsive{
+@media only screen and (max-width: 992px) {
+    .img_slider_responsive {
         margin-left: 30%;
         margin-top: 10%;
     }
-    #image_club li{
+
+    #image_club li {
         list-style: none;
         width: 40%;
         display: inline-block;
     }
-    .img_slider_responsive{
+
+    .img_slider_responsive {
         width: 250px;
         height: 250px;
     }
-
+}
 /*Footer*/
 .footer{
     background-color: red;

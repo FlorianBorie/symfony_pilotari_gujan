@@ -8,6 +8,7 @@ use App\Form\InscriptionType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -30,7 +31,7 @@ class SecurityController extends AbstractController
     {
         // New mail
         $message = (new \Swift_Message('Nouvelle demande de connexion sur le site du pilotari : '))
-            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setFrom('flo.borie33@gmail.com')
             ->setTo('contact@pilotari_gujan.fr')
             ->setBody($this->renderView('site/mail_profil.html.twig', [
                 'profil' => $profil
@@ -42,7 +43,6 @@ class SecurityController extends AbstractController
     /**
      * @Route("/inscription", name="inscription")
      */
-
     public function inscription(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder)
     {
         $profil = new Profil();
@@ -52,26 +52,38 @@ class SecurityController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $hash = $encoder->encodePassword($profil, $profil->getPassword());
+            if (!$this->getDoctrine()->getRepository(Profil::class)->isProfilExist($form->getData()->getMail())) {
+                $hash = $encoder->encodePassword($profil, $profil->getPassword());
 
-            $profil->setPassword($hash);
+                $profil->setPassword($hash);
 
-            $this -> InscriptionMail($profil);
+                $this->InscriptionMail($profil);
 
-            $this->addFlash(
-                'notice',
-                'Vôtre demande d\'inscription à bien été pris en compte, vous aurez une réponse dans 72H'
-            );
+                $this->addFlash(
+                    'notice',
+                    'Vôtre demande d\'inscription à bien été pris en compte, vous aurez une réponse dans 72H'
+                );
+                $this->InscriptionMail($profil);
 
-            $manager->persist($profil);
-            $manager->flush();
+                $manager->persist($profil);
+                $manager->flush();
 
-            return $this->redirect('/connexion');
+                return $this->redirectToRoute('login');
+            }
         }
 
         return $this->render('site/inscription.html.twig',[
             'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/connexion", name="login")
+     * @return Response
+     */
+    public function login()
+    {
+        return new Response('toto');
     }
 
 

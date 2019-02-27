@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Contacter;
 use App\Entity\Profil;
+use App\Entity\Newsletter;
 
 class SiteController extends AbstractController
 {
@@ -39,6 +40,18 @@ class SiteController extends AbstractController
         $this->mailer->send($message);
     }
 
+    public function envoiNewsletter(Newsletter $newsletter)
+    {
+        // New mail
+        $message = (new \Swift_Message('Demande newsletter: '))
+            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setTo('tototata33380@gmail.com')
+            ->setBody($this->renderView('site/contacter_newsletter.html.twig', [
+                'newsletter' => $newsletter
+            ]), 'text/html');
+        // Sent email
+        $this->mailer->send($message);
+    }
     /**
      * @Route("/site", name="site")
      */
@@ -66,6 +79,14 @@ class SiteController extends AbstractController
     }
 
     /**
+     * @Route("/cancha", name="cancha")
+     */
+    public function cancha()
+    {
+        return $this->render('site/cancha.html.twig');
+    }
+
+    /**
      * @Route("/competition", name="competition")
      */
 
@@ -86,9 +107,32 @@ class SiteController extends AbstractController
     /**
      * @Route("/newsletter", name="newsletter")
      */
-    public function newsletter()
+    public function newsletter(Request $request, ObjectManager $manager)
     {
-        return $this->render('site/newsletter.html.twig');
+        $newsletter = new Newsletter();
+
+        $form = $this->createFormBuilder($newsletter)
+            ->add('mail', EmailType::class)
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $this->envoiNewsletter($newsletter);
+
+            $this->addFlash(
+                'notice',
+                'Votre demande à bien été envoyé'
+            );
+
+            $manager->persist($newsletter);
+            $manager->flush();
+
+        }
+        return $this->render('site/newsletter.html.twig', [
+            'formNewsletter' => $form->createView()
+        ]);
     }
 
     /**

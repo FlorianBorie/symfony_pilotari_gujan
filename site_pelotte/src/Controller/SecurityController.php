@@ -59,20 +59,27 @@ class SecurityController extends AbstractController
 
                 $this->InscriptionMail($profil);
 
-                $this->addFlash(
-                    'notice',
-                    'Vôtre demande d\'inscription à bien été pris en compte, vous aurez une réponse dans 72H'
-                );
-                $this->InscriptionMail($profil);
-
                 $manager->persist($profil);
                 $manager->flush();
 
             }
+            return $this->redirectToRoute('connexion');
         }
 
         return $this->render('site/inscription.html.twig',[
             'form' => $form->createView()
         ]);
     }
+    /**
+     * @Route("/login", name="connexion")
+     */
+    public function login()
+    {
+        return $this->render(('site/login.html.twig'));
+    }
+
+    /**
+     * @Route("/deconnexion", name="logout")
+     */
+    public function logout() {}
 }

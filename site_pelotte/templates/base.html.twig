@@ -15,34 +15,77 @@
 <div id="header">
     <img id="img_mur" src="../img/logo.jpg">
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav mr-auto">
-            <li id="navBar" class="nav-item">
-                <a class="nav-link" href="{{ path('home') }}">Accueil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('competition') }}">Compétition</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('sponsor') }}">Sponsor</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('newsletter') }}">Newsletter</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('inscription') }}">Inscription</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('contacter') }}">Nous Contacter</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
+{% if not app.user %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li id="navBar" class="nav-item">
+                    <a class="nav-link" href="{{ path('home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('competition') }}">Compétition</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('sponsor') }}">Sponsor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('newsletter') }}">Newsletter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('contacter') }}">Nous Contacter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('inscription') }}">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('connexion') }}">Connexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+{% else %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li id="navBar" class="nav-item">
+                    <a class="nav-link" href="{{ path('home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('competition') }}">Compétition</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('cancha') }}">Réservation Cancha</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('evenement') }}">Evènement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('sponsor') }}">Sponsor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('newsletter') }}">Newsletter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('contacter') }}">Nous Contacter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('inscription') }}">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('logout') }}">Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{% endif %}
+<div class="container" id="body-container">
     {% block body %}{% endblock %}
 </div>
 

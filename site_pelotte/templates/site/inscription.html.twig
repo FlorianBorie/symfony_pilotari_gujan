@@ -12,7 +12,7 @@
         {% endfor %}
     {% endfor %}
 
-    <h1>Inscription</h1>
+    <h1 align="center" id="title_inscription">Inscription</h1>
 
     {{ form_start(form) }}
 
@@ -23,7 +23,6 @@
     {{ form_row(form.confirm_password,{'label': 'Confirmation de votre mot de passe' , 'attr' : { 'placeholder': 'Répétez votre mot de passe'}}) }}
 
     <button type="submit" class="btn btn-info">Inscription</button>
-
 
 
     {{ form_end(form) }}

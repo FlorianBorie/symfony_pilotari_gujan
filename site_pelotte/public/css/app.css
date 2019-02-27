@@ -4,45 +4,49 @@ body {
 h1{
      color: black;
 }
+#body-container {
+    min-height: 100%;
+}
 #img_mur{
     width: 100%;
 }
 
 /*Nav bar*/
 .nav-item{
-    margin-left: 17%;
+    margin-left: 12%;
 }
 .nav-link{
     font-size: 150%;
-    width: 200%;
+    width: 160%;
 }
+
 /*responsive de la navbar*/
 @media screen and (max-width: 1430px){
-    .nav-item { margin-left: 15%;}
+    .nav-item { margin-left: 13%;}
 }
 @media screen and (max-width: 1360px){
-    .nav-item { margin-left: 13.5%;}
+    .nav-item { margin-left: 11.5%;}
 }
 @media screen and (max-width: 1300px){
-    .nav-item { margin-left: 12%;}
-}
-@media screen and (max-width: 1260px){
     .nav-item { margin-left: 11%;}
 }
-@media screen and (max-width: 1200px) {
-    .nav-item {margin-left: 10%;}
+@media screen and (max-width: 1260px){
+    .nav-item { margin-left: 10%;}
 }
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1200px) {
     .nav-item {margin-left: 9%;}
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1160px) {
     .nav-item {margin-left: 8%;}
 }
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1100px) {
     .nav-item {margin-left: 7%;}
 }
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1060px) {
     .nav-item {margin-left: 6%;}
+}
+@media screen and (max-width: 1030px) {
+    .nav-item {margin-left: 5%;}
 }
 /*fin navbar*/
 
@@ -74,7 +78,7 @@ h1{
 }
 
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1200px) {
     .slideshow {
         visibility: hidden;
     }
@@ -82,7 +86,7 @@ h1{
         display: none;
     }
 }
-@media only screen and (min-width: 1170px){
+@media only screen and (min-width: 1201px){
     .image_club{
         visibility: hidden;
     }
@@ -90,31 +94,23 @@ h1{
         display: none;
     }
 }
-
-@media only screen and (max-width: 1170px){
-    .img_slider_responsive{
-        margin-left: 33%;
+@media only screen and (max-width: 1201px) {
+    .img_slider_responsive {
+        margin-left: 30%;
         margin-top: 10%;
     }
-    #image_club li{
+
+    #image_club li {
         list-style: none;
         width: 40%;
         display: inline-block;
     }
 
-}
-@media only screen and (max-width: 1170px){
-    .img_slider_responsive{
-        margin-left: 33%;
-        margin-top: 10%;
-    }
-    #image_club li{
-        list-style: none;
-        width: 40%;
-        display: inline-block;
+    .img_slider_responsive {
+        width: 250px;
+        height: 250px;
     }
 }
-
 @media only screen and (max-width: 992px) {
     .img_slider_responsive {
         margin-left: 30%;
@@ -132,6 +128,91 @@ h1{
         height: 250px;
     }
 }
+@media only screen and (max-width: 768px) {
+    .img_slider_responsive {
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    #image_club li {
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+
+    .img_slider_responsive {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .img_slider_responsive {
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    #image_club li {
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+
+    .img_slider_responsive {
+        width: 190px;
+        height: 190px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .img_slider_responsive {
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    #image_club li {
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+
+    .img_slider_responsive {
+        width: 170px;
+        height: 170px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .img_slider_responsive {
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    #image_club li {
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+
+    .img_slider_responsive {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .img_slider_responsive {
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    #image_club li {
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+
+    .img_slider_responsive {
+        width: 140px;
+        height: 140px;
+    }
+}
 /*Footer*/
 .footer{
     background-color: red;
@@ -141,11 +222,12 @@ h1{
     margin-left: 5%;
 }
 #img_fb{
-    margin-left: 10%;
+    margin-left: 15%;
 }
 .col-md-3.mt-md-0.mt-2 {
     margin-left: 4%;
 }
+
 /*page sponsor*/
 #sponsor{
     margin-left: 20%;
@@ -154,10 +236,71 @@ h1{
     margin-left: 10%;
 }
 
+@media only screen and (max-width: 1190px) {
+    #img_fb{margin-left: 20%;}
+}
+@media only screen and (max-width: 900px) {
+    #img_fb{margin-left: 27%;}
+}
+@media only screen and (max-width: 820px) {
+    .row{margin-left: 0%;}
+    #img_fb{margin-left: 0%;}
+}
 .img_sponsor{
     width: 20%;
     height: 300px;
     margin-left: 2%;
+    margin-top: 3%;
+}
+
+/*page newsletter*/
+
+#title_news{
+    margin-top: 5%;
+}
+#btn_news{
+    margin-bottom: 5%;
+}
+@media only screen and (max-width: 1360px) {
+    #btn_news{margin-bottom: 6%}
+}
+@media only screen and (max-width: 1350px) {
+    #btn_news{margin-bottom: 6%}
+}
+@media only screen and (max-width: 1300px) {
+    #btn_news{margin-bottom: 7%}
+}
+@media only screen and (max-width: 1220px) {
+    #btn_news{margin-bottom: 8%}
+}
+@media only screen and (max-width: 1199px) {
+    #btn_news{margin-bottom: 10%}
+}
+@media only screen and (max-width: 1140px) {
+    #btn_news{margin-bottom: 11%}
+}
+@media only screen and (max-width: 1180px) {
+    #btn_news{margin-bottom: 12%}
+}
+@media only screen and (max-width: 1120px) {
+    #btn_news{margin-bottom: 13%}
+}
+@media only screen and (max-width: 992px) {
+    #btn_news{margin-bottom: 18%}
+    #title_news{margin-top: 10%}
+}
+@media only screen and (max-width: 925px) {
+    #btn_news{margin-bottom: 20%}
+}
+
+/*page Nous contacter*/
+
+#coordonées{
+    margin-top: 2%;
+}
+
+/*page inscription*/
+#title_inscription{
     margin-top: 3%;
 }
 

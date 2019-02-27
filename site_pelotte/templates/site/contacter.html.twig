@@ -21,10 +21,10 @@
     <h1>Nous contacter</h1>
     {{ form_start(formContacter) }}
 
-    {{ form_row(formContacter.nom, {'attr' : {'placeholder': "Mettez vôtre nom"}}) }}
-    {{ form_row(formContacter.mail, {'attr' : {'placeholder': "Mettez vôtre mail"}}) }}
-    {{ form_row(formContacter.objet, {'attr' : {'placeholder': "Ecrire l'obget de vôtre message"}}) }}
-    {{ form_row(formContacter.message, {'attr' : {'placeholder': "Ecrire vôtre message"}}) }}
+    {{ form_row(formContacter.nom, {'attr' : {'placeholder': "Mettez votre nom"}}) }}
+    {{ form_row(formContacter.mail, {'attr' : {'placeholder': "Mettez votre mail"}}) }}
+    {{ form_row(formContacter.objet, {'attr' : {'placeholder': "Ecrire l'objet de votre message"}}) }}
+    {{ form_row(formContacter.message, {'attr' : {'placeholder': "Ecrire votre message"}}) }}
 
     <button type="submit" class="btn btn-info">Envoyer</button>
     {{ form_widget(formContacter) }}

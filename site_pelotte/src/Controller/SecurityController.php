@@ -31,8 +31,8 @@ class SecurityController extends AbstractController
     {
         // New mail
         $message = (new \Swift_Message('Nouvelle demande de connexion sur le site du pilotari : '))
-            ->setFrom('flo.borie33@gmail.com')
-            ->setTo('contact@pilotari_gujan.fr')
+            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setTo('tototata33380@gmail.com')
             ->setBody($this->renderView('site/mail_profil.html.twig', [
                 'profil' => $profil
             ]), 'text/html');
@@ -68,7 +68,6 @@ class SecurityController extends AbstractController
                 $manager->persist($profil);
                 $manager->flush();
 
-                return $this->redirectToRoute('login');
             }
         }
 
@@ -76,15 +75,4 @@ class SecurityController extends AbstractController
             'form' => $form->createView()
         ]);
     }
-
-    /**
-     * @Route("/connexion", name="login")
-     * @return Response
-     */
-    public function login()
-    {
-        return new Response('toto');
-    }
-
-
 }

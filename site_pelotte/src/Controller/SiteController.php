@@ -84,6 +84,16 @@ class SiteController extends AbstractController
     }
 
     /**
+     * @Route("/connexion", name="connexion")
+     */
+
+    public function connexion()
+    {
+        return $this->render('site/connexion.html.twig');
+    }
+
+
+    /**
      * @Route("/newsletter", name="newsletter")
      */
 
@@ -127,7 +137,5 @@ class SiteController extends AbstractController
             'formContacter' => $form->createView()
         ]);
     }
-
-
 
 }

@@ -16,10 +16,36 @@ h1{
     font-size: 150%;
     width: 200%;
 }
-
-@media screen and (max-width: 1400px){
-    .nav-item { margin-left: 10% !important;}
+/*responsive de la navbar*/
+@media screen and (max-width: 1430px){
+    .nav-item { margin-left: 15%;}
 }
+@media screen and (max-width: 1360px){
+    .nav-item { margin-left: 13.5%;}
+}
+@media screen and (max-width: 1300px){
+    .nav-item { margin-left: 12%;}
+}
+@media screen and (max-width: 1260px){
+    .nav-item { margin-left: 11%;}
+}
+@media screen and (max-width: 1200px) {
+    .nav-item {margin-left: 10%;}
+}
+@media screen and (max-width: 1160px) {
+    .nav-item {margin-left: 9%;}
+}
+@media screen and (max-width: 1100px) {
+    .nav-item {margin-left: 8%;}
+}
+@media screen and (max-width: 1060px) {
+    .nav-item {margin-left: 7%;}
+}
+@media screen and (max-width: 1030px) {
+    .nav-item {margin-left: 6%;}
+}
+/*fin navbar*/
+
 /*image*/
 #header{
     background-color: black;
@@ -42,21 +68,68 @@ h1{
     padding:0; margin:0;
     list-style: none;
 }
+
 .slideshow li {
     float: left;
 }
 
-@media screen and (max-width: 900px) {
-    .container{margin-left: 1.5%}
-    .slideshow{width: 400px}
-    .img_slider{width: 450px}
+
+@media only screen and (max-width: 1170px) {
+    .slideshow {
+        visibility: hidden;
+    }
+    #normal{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1170px){
+    .image_club{
+        visibility: hidden;
+    }
+    #responsive{
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 769px) {
-    .container{margin-left: 3%}
-    .slideshow{width: 900px}
-    .img_slider{width: 450px}
+@media only screen and (max-width: 1170px){
+    .img_slider_responsive{
+        margin-left: 33%;
+        margin-top: 10%;
+    }
+    #image_club li{
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+
+
 }
+@media only screen and (max-width: 1170px){
+    .img_slider_responsive{
+        margin-left: 33%;
+        margin-top: 10%;
+    }
+    #image_club li{
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .img_slider_responsive{
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+    #image_club li{
+        list-style: none;
+        width: 40%;
+        display: inline-block;
+    }
+    .img_slider_responsive{
+        width: 250px;
+        height: 250px;
+    }
 
 /*Footer*/
 .footer{
@@ -88,8 +161,3 @@ h1{
 }
 
 
-@media screen and (max-width: 640px) {
-    body {
-        background-color:red;
-    }
-}

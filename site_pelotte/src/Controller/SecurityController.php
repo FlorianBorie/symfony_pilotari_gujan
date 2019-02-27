@@ -66,7 +66,7 @@ class SecurityController extends AbstractController
             $manager->persist($profil);
             $manager->flush();
 
-            return $this->redirectToRoute('competition.html.twig');
+            return $this->redirect('/connexion');
         }
 
         return $this->render('site/inscription.html.twig',[
@@ -74,11 +74,5 @@ class SecurityController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/connexion", name="connexion")
-     */
-    public function connexion(){
-        return $this->render('site/connexion.html.twig');
-    }
 
 }

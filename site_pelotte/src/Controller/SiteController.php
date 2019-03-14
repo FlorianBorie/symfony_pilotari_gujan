@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 
+use App\Entity\Events;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -170,4 +172,32 @@ class SiteController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/events", name="events")
+     */
+    public function test(Request $request)
+    {
+        $events = [];
+        $eventsFromDatabase = $this->getDoctrine()->getRepository(Events::class)->findBy(['type' => $request->query->get('type')]); // aller chercher les events dans la bdd
+        foreach ($eventsFromDatabase as $event) {
+            $events[] = [
+                'title' => $event->getTitre(),
+                'start' => $event->getDateDebut()->format('c'),
+                'end' => $event->getDateFin()->format('c'),
+
+            ];
+        }
+
+        /*$events[] = [
+            'title' => 'test',
+            'start' => '2019-04-04T13:50:50.008',
+            'end' => '2019-04-06T13:50:50.008',
+        ];
+        $test[] = [
+            'title' => 'test2',
+            'start' => '2019-04-05T13:50:50.008',
+            'end' => '2019-04-07T13:50:50.008',
+        ];*/
+        return new JsonResponse($events);
+    }
 }

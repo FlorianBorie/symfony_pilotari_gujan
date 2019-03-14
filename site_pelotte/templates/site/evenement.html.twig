@@ -1,5 +1,27 @@
-{% extends 'base.html.twig' %}
-
+{% extends 'base.html.twig.' %}
 {% block body %}
+    <h1 style="text-align: center">Evènement</h1>
+    <div id="calendar"></div>
+{% endblock %}
 
+{% block javascripts %}
+
+    <script>
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                eventSources: [
+                    {
+                        url: '{{ path('events', {'type': 'evenement'}) }}',
+                        type: 'GET'
+                    }
+                ],
+                eventClick: function(event) {
+                    if (event.url) {
+                        window.open(event.url);
+                        return false;
+                    }
+                }
+            });
+        })
+    </script>
 {% endblock %}

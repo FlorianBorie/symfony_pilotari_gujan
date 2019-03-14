@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h2 align="center" id="title_connexion">Connexion</h2>
+
+    <h1 align="center" id="title_connexion">Connexion</h1>
+
+    {% if error %}
+        <div class="alert alert-danger">Votre mail ou votre mot de passe n'est pas correct</div>
+    {% endif %}
 
     <form action="{{ path('connexion') }}" method="post">
         <div class="form-group">
@@ -16,6 +21,7 @@
         <div class="form-group">
             <button type="submit" class="btn btn-info">Connexion</button>
         </div>
+        <a href="{{ path('inscription') }}">Si vous n'êtes pas inscrit cliquer ici</a>
 
     </form>
 {% endblock %}

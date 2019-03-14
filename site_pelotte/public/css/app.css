@@ -12,44 +12,38 @@ h1{
 }
 
 /*Nav bar*/
-.nav-item{
-    margin-left: 12%;
-}
 .nav-link{
-    font-size: 150%;
-    width: 160%;
+    font-size: 220%;
 }
 
-/*responsive de la navbar*/
-@media screen and (max-width: 1430px){
-    .nav-item { margin-left: 13%;}
-}
-@media screen and (max-width: 1360px){
-    .nav-item { margin-left: 11.5%;}
-}
-@media screen and (max-width: 1300px){
-    .nav-item { margin-left: 11%;}
-}
-@media screen and (max-width: 1260px){
-    .nav-item { margin-left: 10%;}
-}
-@media screen and (max-width: 1200px) {
-    .nav-item {margin-left: 9%;}
-}
-@media screen and (max-width: 1160px) {
-    .nav-item {margin-left: 8%;}
-}
-@media screen and (max-width: 1100px) {
-    .nav-item {margin-left: 7%;}
-}
-@media screen and (max-width: 1060px) {
-    .nav-item {margin-left: 6%;}
-}
-@media screen and (max-width: 1030px) {
-    .nav-item {margin-left: 5%;}
-}
-/*fin navbar*/
+@media only screen and (max-width: 1483px) {
+    .nav-link{font-size: 210%}
 
+}
+@media only screen and (max-width: 1424px) {
+    .nav-link{font-size: 200%}
+}
+@media only screen and (max-width: 1365px) {
+    .nav-link{font-size: 190%}
+}
+@media only screen and (max-width: 1308px) {
+    .nav-link{font-size: 180%}
+}
+@media only screen and (max-width: 1249px) {
+    .nav-link{font-size: 170%}
+}
+@media only screen and (max-width: 1190px) {
+    .nav-link{font-size: 160%}
+}
+@media only screen and (max-width: 1132px) {
+    .nav-link{font-size: 150%}
+}
+@media only screen and (max-width: 1074px) {
+    .nav-link{font-size: 140%}
+}
+@media only screen and (max-width: 1014px) {
+    .nav-link{font-size: 130%}
+}
 /*image*/
 #header{
     background-color: black;
@@ -303,5 +297,8 @@ h1{
 #title_inscription{
     margin-top: 3%;
 }
-
+/*page de contact*/
+#title_connexion{
+    margin-top: 2%;
+}
 

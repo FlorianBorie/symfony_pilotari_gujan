@@ -1,1 +1,22 @@
 {% extends 'base.html.twig.' %}
+{% block body %}
+    <h1 style="text-align: center">Compétition</h1>
+    <div id="calendar"></div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script>
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                eventSources: [
+                    {
+                        url: '{{ path('events', {'type': 'competition'}) }}',
+                        type: 'GET'
+                    }
+                ]
+            });
+        })
+    </script>
+{% endblock %}

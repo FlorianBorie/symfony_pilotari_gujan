@@ -1,0 +1,12 @@
+{% extends 'base.html.twig.' %}
+{% block body %}
+    {% if event.type == 'evenement' %}
+        <h1 style="text-align: center">{{ event.titre }}</h1>
+        <div>
+            <p>{{ event.contenu }}</p>
+        </div>
+    {% elseif event.type == 'competition' %}
+        {{  event.titre }}
+    {% endif %}
+{% endblock %}
+

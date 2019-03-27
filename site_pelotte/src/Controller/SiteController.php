@@ -201,6 +201,8 @@ class SiteController extends AbstractController
     {
         $eventFromDatabase = $this->getDoctrine()->getRepository(Events::class)->find($id); // aller chercher les events dans la bdd
 
-        return new JsonResponse($eventFromDatabase);
+        return $this->render('site/event.html.twig', [
+        'event' => $eventFromDatabase
+        ]);
     }
 }

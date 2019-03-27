@@ -37,6 +37,13 @@ class Events
      */
     private $date_fin;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $contenu;
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +92,18 @@ class Events
     public function setDateFin(\DateTimeInterface $date_fin): self
     {
         $this->date_fin = $date_fin;
+
+        return $this;
+    }
+
+    public function getContenu(): ?string
+    {
+        return $this->contenu;
+    }
+
+    public function setContenu(string $contenu): self
+    {
+        $this->contenu = $contenu;
 
         return $this;
     }

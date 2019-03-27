@@ -14,6 +14,7 @@ class InscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('numLicence')
             ->add('username')
             ->add('lastname')
             ->add('mail', EmailType::class)

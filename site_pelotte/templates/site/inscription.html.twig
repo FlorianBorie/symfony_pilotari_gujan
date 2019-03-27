@@ -16,6 +16,7 @@
 
     {{ form_start(form) }}
 
+    {{ form_row(form.numLicence, {'label' : 'Numéro de licence', 'attr' : {'placeholder': 'Mettez votre numéro de licence'}}) }}
     {{ form_row(form.username, {'label': 'Nom de famille' , 'attr' : { 'placeholder': 'Mettez votre nom de famille'}}) }}
     {{ form_row(form.lastname, {'label': 'Votre prénom' , 'attr' : { 'placeholder': 'Mettez votre prénom'}}) }}
     {{ form_row(form.mail,{'label': 'Email' , 'attr' : { 'placeholder': 'Saisir votre email'}}) }}

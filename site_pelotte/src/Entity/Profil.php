@@ -26,6 +26,11 @@ class Profil implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $numLicence;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $username;
 
     /**
@@ -56,6 +61,17 @@ class Profil implements UserInterface
         return $this->id;
     }
 
+    public function getNumLicence(): ?string
+    {
+        return $this->numLicence;
+    }
+
+    public function setNumLicence(string $numLicence): self
+    {
+        $this->numLicence = $numLicence;
+
+        return $this;
+    }
 
     public function getUsername(): ?string
     {

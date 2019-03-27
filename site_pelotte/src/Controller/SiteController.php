@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\NumLicense;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,18 +28,30 @@ class SiteController extends AbstractController
         $this->mailer = $mailer;
     }
     public function contacterMail(Contacter $contacter)
+{
+    // New mail
+    $message = (new \Swift_Message('Nous contacter : '))
+        ->setFrom('flo.borie33@gmail.com')
+        ->setTo('contact@pilotari_gujan.fr')
+        ->setBody($this->renderView('site/contacter_mail.html.twig', [
+            'contacter' => $contacter
+        ]), 'text/html');
+    // Sent email
+    $this->mailer->send($message);
+}
+
+    public function envoiNewsletter($newsletter)
     {
         // New mail
         $message = (new \Swift_Message('Nous contacter : '))
             ->setFrom('noreply@pilotari_gujan.fr')
             ->setTo('tototata33380@gmail.com')
             ->setBody($this->renderView('site/contacter_mail.html.twig', [
-                'contacter' => $contacter
+                'contacter' => $newsletter
             ]), 'text/html');
         // Sent email
         $this->mailer->send($message);
     }
-
     /**
      * @Route("/site", name="site")
      */
@@ -86,8 +99,29 @@ class SiteController extends AbstractController
     /**
      * @Route("/newsletter", name="newsletter")
      */
-    public function newsletter()
+    public function newsletter(Request $request, ObjectManager $manager)
     {
+        $newsletter = new Newsletter();
+
+        $form = $this->createFormBuilder($newsletter)
+            ->add('mail', EmailType::class)
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $this->envoiNewsletter($newsletter);
+
+            $this->addFlash(
+                'notice',
+                'Votre mail à bien été envoyé'
+            );
+
+            $manager->persist($newsletter);
+            $manager->flush();
+
+        }
         return $this->render('site/newsletter.html.twig');
     }
 
@@ -125,5 +159,6 @@ class SiteController extends AbstractController
             'formContacter' => $form->createView()
         ]);
     }
+
 
 }

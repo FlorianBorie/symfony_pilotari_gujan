@@ -102,6 +102,8 @@ h1{
         display: inline-block;
     }
 
+
+
 }
 @media only screen and (max-width: 1170px){
     .img_slider_responsive{
@@ -134,7 +136,8 @@ h1{
 }
 /*Footer*/
 .footer{
-    background-color: red;
+    background-color: black;
+    color: white;
     margin-top: 3%;
 }
 .col-md-4 {

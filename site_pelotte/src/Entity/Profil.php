@@ -50,6 +50,11 @@ class Profil implements UserInterface
      */
     public  $confirm_password;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\NumLicense", mappedBy="profil", cascade={"persist", "remove"})
+     */
+    private $numLicense;
+
 
     public function getId(): ?int
     {
@@ -112,5 +117,23 @@ class Profil implements UserInterface
     public function getRoles()
     {
         return ['ROLE_PROFIL'];
+    }
+
+    public function getNumLicense(): ?NumLicense
+    {
+        return $this->numLicense;
+    }
+
+    public function setNumLicense(?NumLicense $numLicense): self
+    {
+        $this->numLicense = $numLicense;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newProfil = $numLicense === null ? null : $this;
+        if ($newProfil !== $numLicense->getProfil()) {
+            $numLicense->setProfil($newProfil);
+        }
+
+        return $this;
     }
 }

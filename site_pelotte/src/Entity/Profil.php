@@ -51,16 +51,22 @@ class Profil implements UserInterface
     public  $confirm_password;
 
     /**
+<<<<<<< HEAD
      * @ORM\OneToOne(targetEntity="App\Entity\NumLicense", mappedBy="profil", cascade={"persist", "remove"})
      */
     private $numLicense;
+=======
+     * @ORM\OneToOne(targetEntity="App\Entity\Licence", inversedBy="profil", cascade={"persist", "remove"})
+     * @Assert\EqualTo(propertyPath="numLicence", message="Vous n'avez pas le même numero de licence")
+     */
+    private $licence;
+>>>>>>> master
 
 
     public function getId(): ?int
     {
         return $this->id;
     }
-
 
     public function getUsername(): ?string
     {
@@ -119,6 +125,7 @@ class Profil implements UserInterface
         return ['ROLE_PROFIL'];
     }
 
+<<<<<<< HEAD
     public function getNumLicense(): ?NumLicense
     {
         return $this->numLicense;
@@ -133,6 +140,16 @@ class Profil implements UserInterface
         if ($newProfil !== $numLicense->getProfil()) {
             $numLicense->setProfil($newProfil);
         }
+=======
+    public function getLicence(): ?Licence
+    {
+        return $this->licence;
+    }
+
+    public function setLicence(?Licence $licence): self
+    {
+        $this->licence = $licence;
+>>>>>>> master
 
         return $this;
     }

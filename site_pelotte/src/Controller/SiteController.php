@@ -3,17 +3,24 @@
 namespace App\Controller;
 
 
+<<<<<<< HEAD
 use App\Entity\NumLicense;
+=======
+use App\Entity\Events;
+>>>>>>> master
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Contacter;
 use App\Entity\Profil;
+use App\Entity\Newsletter;
 
 class SiteController extends AbstractController
 {
@@ -52,6 +59,22 @@ class SiteController extends AbstractController
         // Sent email
         $this->mailer->send($message);
     }
+<<<<<<< HEAD
+=======
+
+    public function envoiNewsletter(Newsletter $newsletter)
+    {
+        // New mail
+        $message = (new \Swift_Message('Demande newsletter: '))
+            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setTo('tototata33380@gmail.com')
+            ->setBody($this->renderView('site/contacter_newsletter.html.twig', [
+                'newsletter' => $newsletter
+            ]), 'text/html');
+        // Sent email
+        $this->mailer->send($message);
+    }
+>>>>>>> master
     /**
      * @Route("/site", name="site")
      */
@@ -76,6 +99,14 @@ class SiteController extends AbstractController
     public function evenement()
     {
         return $this->render('site/evenement.html.twig');
+    }
+
+    /**
+     * @Route("/cancha", name="cancha")
+     */
+    public function cancha()
+    {
+        return $this->render('site/cancha.html.twig');
     }
 
     /**
@@ -115,14 +146,24 @@ class SiteController extends AbstractController
 
             $this->addFlash(
                 'notice',
+<<<<<<< HEAD
                 'Votre mail à bien été envoyé'
+=======
+                'Votre demande à bien été envoyé'
+>>>>>>> master
             );
 
             $manager->persist($newsletter);
             $manager->flush();
 
         }
+<<<<<<< HEAD
         return $this->render('site/newsletter.html.twig');
+=======
+        return $this->render('site/newsletter.html.twig', [
+            'formNewsletter' => $form->createView()
+        ]);
+>>>>>>> master
     }
 
     /**
@@ -160,5 +201,38 @@ class SiteController extends AbstractController
         ]);
     }
 
+<<<<<<< HEAD
 
+=======
+    /**
+     * @Route("/events", name="events")
+     */
+    public function test(Request $request)
+    {
+        $events = [];
+        $eventsFromDatabase = $this->getDoctrine()->getRepository(Events::class)->findBy(['type' => $request->query->get('type')]); // aller chercher les events dans la bdd
+        foreach ($eventsFromDatabase as $event) {
+            $events[] = [
+                'title' => $event->getTitre(),
+                'start' => $event->getDateDebut()->format('c'),
+                'end' => $event->getDateFin()->format('c'),
+                'id' => $event->getId(),
+                'url' => '/event/' . $event->getId()
+
+            ];
+        }
+
+        return new JsonResponse($events);
+    }
+
+    /**
+     * @Route("/event/{id}", name="event")
+     */
+    public function event($id)
+    {
+        $eventFromDatabase = $this->getDoctrine()->getRepository(Events::class)->find($id); // aller chercher les events dans la bdd
+
+        return new JsonResponse($eventFromDatabase);
+    }
+>>>>>>> master
 }

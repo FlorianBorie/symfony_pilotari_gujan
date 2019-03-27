@@ -1,8 +1,12 @@
 {% extends 'base.html.twig' %}
+<<<<<<< HEAD
 
 
 {% form_theme form  'bootstrap_4_layout.html.twig' %}
 
+=======
+{% form_theme formNewsletter  'bootstrap_4_layout.html.twig' %}
+>>>>>>> master
 {% block body %}
 
     {% for label, messages in app.flashes %}
@@ -13,6 +17,7 @@
         {% endfor %}
     {% endfor %}
 
+<<<<<<< HEAD
     <h1>Newsletter</h1>
 
     {{ form_start(form) }}
@@ -30,3 +35,18 @@
 
 
 
+=======
+    <h1 align="center" id="title_news">Newsletter</h1>
+
+    {{ form_start(formNewsletter) }}
+
+    {{ form_row(formNewsletter.mail,{'label': 'Email' , 'attr' : { 'placeholder': 'Saisir votre email'}}) }}
+
+    <button type="submit" class="btn btn-info" id="btn_news">Envoi de la Newsletter</button>
+
+
+
+    {{ form_end(formNewsletter) }}
+
+{% endblock %}
+>>>>>>> master

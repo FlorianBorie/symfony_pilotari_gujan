@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Licence;
 use App\Entity\Profil;
 use App\Form\InscriptionType;
 
@@ -47,23 +48,47 @@ class SecurityController extends AbstractController
     public function inscription(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder)
     {
         $profil = new Profil();
-
         $form = $this->createForm(InscriptionType::class, $profil);
+        $session = $this->get('session');
 
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            if (!$this->getDoctrine()->getRepository(Profil::class)->isProfilExist($form->getData()->getMail())) {
-                $hash = $encoder->encodePassword($profil, $profil->getPassword());
+            $profilRepo = $this->getDoctrine()->getRepository(Profil::class);
+            $licenceRepo = $this->getDoctrine()->getRepository(Licence::class);
+            $isAlreadyRegistered = $profilRepo->findBy(['mail' => $form->getData()->getMail()]);
 
-                $profil->setPassword($hash);
+            if (empty($isAlreadyRegistered)) {
+                $licence = $licenceRepo->findOneBy(['numLicence' => $form['numLicence']->getData()]);
+                if (!empty($licence)) {
+                    $hash = $encoder->encodePassword($profil, $profil->getPassword());
 
-                $this->InscriptionMail($profil);
+                    $profil->setPassword($hash);
+                    $profil->setLicence($licence);
 
-                $manager->persist($profil);
-                $manager->flush();
+                    $this->InscriptionMail($profil);
 
+                    $manager->persist($profil);
+                    $manager->flush();
+                    $session->remove('inscriptionData');
+                } else {
+                    $data = [
+                        'username' => $form->getData()->getUsername(),
+                        'lastname' => $form->getData()->getLastname(),
+                        'mail' => $form->getData()->getMail()
+                    ];
+
+                    $session->set('inscriptionData', $data);
+
+                    $this->addFlash(
+                        'alert',
+                        'Votre numéro de licence n\'est pas valide'
+                    );
+
+                    return $this->redirectToRoute('inscription');
+                }
             }
+
             return $this->redirectToRoute('connexion');
         }
 

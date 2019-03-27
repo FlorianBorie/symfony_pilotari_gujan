@@ -26,11 +26,6 @@ class Profil implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $numLicence;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $username;
 
     /**
@@ -55,22 +50,16 @@ class Profil implements UserInterface
      */
     public  $confirm_password;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Licence", inversedBy="profil", cascade={"persist", "remove"})
+     * @Assert\EqualTo(propertyPath="numLicence", message="Vous n'avez pas le même numero de licence")
+     */
+    private $licence;
+
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getNumLicence(): ?string
-    {
-        return $this->numLicence;
-    }
-
-    public function setNumLicence(string $numLicence): self
-    {
-        $this->numLicence = $numLicence;
-
-        return $this;
     }
 
     public function getUsername(): ?string
@@ -128,5 +117,17 @@ class Profil implements UserInterface
     public function getRoles()
     {
         return ['ROLE_PROFIL'];
+    }
+
+    public function getLicence(): ?Licence
+    {
+        return $this->licence;
+    }
+
+    public function setLicence(?Licence $licence): self
+    {
+        $this->licence = $licence;
+
+        return $this;
     }
 }

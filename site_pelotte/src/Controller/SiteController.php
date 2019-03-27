@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Contacter;
@@ -184,20 +185,22 @@ class SiteController extends AbstractController
                 'title' => $event->getTitre(),
                 'start' => $event->getDateDebut()->format('c'),
                 'end' => $event->getDateFin()->format('c'),
+                'id' => $event->getId(),
+                'url' => '/event/' . $event->getId()
 
             ];
         }
 
-        /*$events[] = [
-            'title' => 'test',
-            'start' => '2019-04-04T13:50:50.008',
-            'end' => '2019-04-06T13:50:50.008',
-        ];
-        $test[] = [
-            'title' => 'test2',
-            'start' => '2019-04-05T13:50:50.008',
-            'end' => '2019-04-07T13:50:50.008',
-        ];*/
         return new JsonResponse($events);
+    }
+
+    /**
+     * @Route("/event/{id}", name="event")
+     */
+    public function event($id)
+    {
+        $eventFromDatabase = $this->getDoctrine()->getRepository(Events::class)->find($id); // aller chercher les events dans la bdd
+
+        return new JsonResponse($eventFromDatabase);
     }
 }

@@ -302,3 +302,6 @@ h1{
     margin-top: 2%;
 }
 
+.fc-content:hover {
+    cursor: pointer;
+}

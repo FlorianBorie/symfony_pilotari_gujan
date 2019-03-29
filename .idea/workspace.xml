@@ -14,30 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Profil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Profil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-858">
-              <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
-              <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/event.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="competition.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/competition.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,52 +26,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="easy_admin.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/config/packages/easy_admin.yaml">
+      <file leaf-file-name="event.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/event.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/vendor/easycorp/easyadmin-bundle/src/Resources/views/default/list.html.twig">
+      <file leaf-file-name="Profil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Profil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="134" selection-start-line="134" selection-end-line="135" />
+            <state relative-caret-position="81">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/.env">
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_pelotte/src/Controller/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="238">
+              <caret line="44" column="45" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="45" />
+              <folding>
+                <element signature="e#35#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="contacter_evenement.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_evenement.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="51">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Events.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Events.php">
+      <file leaf-file-name="contacter_mail.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_mail.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="51">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -103,13 +80,22 @@
       <file leaf-file-name="Licence.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Licence.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+            <state relative-caret-position="187">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Oneto</find>
+      <find>add</find>
+    </findStrings>
+    <dirStrings>
+      <dir>D:\logiciel\xampp\htdocs\pelotte_basque_gujan\site_pelotte\src\Entity</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,16 +140,17 @@
         <option value="$PROJECT_DIR$/site_pelotte/templates/site/competition.html.twig" />
         <option value="$PROJECT_DIR$/site_pelotte/public/css/app.css" />
         <option value="$PROJECT_DIR$/site_pelotte/src/Form/InscriptionType.php" />
-        <option value="$PROJECT_DIR$/site_pelotte/src/Entity/Profil.php" />
         <option value="$PROJECT_DIR$/site_pelotte/templates/site/evenement.html.twig" />
         <option value="$PROJECT_DIR$/site_pelotte/templates/site/inscription.html.twig" />
         <option value="$PROJECT_DIR$/site_pelotte/src/Controller/SecurityController.php" />
-        <option value="$PROJECT_DIR$/site_pelotte/src/Controller/SiteController.php" />
-        <option value="$PROJECT_DIR$/site_pelotte/src/Entity/Events.php" />
-        <option value="$PROJECT_DIR$/site_pelotte/templates/site/event.html.twig" />
         <option value="$PROJECT_DIR$/site_pelotte/src/Entity/Licence.php" />
         <option value="$PROJECT_DIR$/site_pelotte/config/packages/easy_admin.yaml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/site_pelotte/src/Entity/Events.php" />
+        <option value="$PROJECT_DIR$/site_pelotte/src/Entity/Profil.php" />
+        <option value="$PROJECT_DIR$/site_pelotte/templates/site/event.html.twig" />
+        <option value="$PROJECT_DIR$/site_pelotte/src/Controller/SiteController.php" />
+        <option value="$PROJECT_DIR$/site_pelotte/templates/site/contacter_evenement.html.twig" />
       </list>
     </option>
   </component>
@@ -172,6 +159,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/site/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -380,6 +370,12 @@
       <path value="$PROJECT_DIR$/site_pelotte/vendor/pagerfanta/pagerfanta" />
     </include_path>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-19" />
+    <option name="y" value="280" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -391,6 +387,70 @@
             <path>
               <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
               <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pelotte_basque_gujan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelotte_basque_gujan" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_pelotte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -439,27 +499,27 @@
       <workItem from="1553072555910" duration="265000" />
       <workItem from="1553079470405" duration="2000" />
       <workItem from="1553104467506" duration="701000" />
-      <workItem from="1553675233336" duration="16172000" />
+      <workItem from="1553675233336" duration="21485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370000" />
+    <option name="totallyTimeSpent" value="5683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21409395" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32905984" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21409395" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299712" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.53133905" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,7 +529,6 @@
       <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="8" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299712" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -503,7 +562,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site/templates/site/attente.html.twig" />
     <entry file="file://$PROJECT_DIR$/site/templates/site/mail_profil.html.twig" />
     <entry file="file://$PROJECT_DIR$/site/templates/site/attenteMail.html.twig" />
     <entry file="file://$PROJECT_DIR$/site/public/css/app.css" />
@@ -571,20 +629,6 @@
         <state relative-caret-position="-128" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_newsletter.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/newsletter.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_pelotte/config/packages/security.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -610,13 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/navbar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -696,20 +733,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/src/Controller/SiteController.php">
+    <entry file="file://$PROJECT_DIR$/site_pelotte/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="204" column="14" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
-          <folding>
-            <element signature="e#35#57#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="575">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_mail.html.twig">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/vendor/easycorp/easyadmin-bundle/src/Resources/views/default/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="134" selection-start-line="134" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/config/packages/easy_admin.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="68" selection-start-line="68" selection-end-line="68" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/newsletter.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_newsletter.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Licence.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -725,66 +804,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/event.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Events.php">
+    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_mail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="51">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Licence.php">
+    <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Events.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+        <state relative-caret-position="2210">
+          <caret line="132" column="48" lean-forward="true" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site_pelotte/src/Entity/Profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858">
-          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+        <state relative-caret-position="81">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_pelotte/src/Controller/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="45" />
           <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
+            <element signature="e#35#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/config/packages/easy_admin.yaml">
+    <entry file="file://$PROJECT_DIR$/site_pelotte/templates/site/contacter_evenement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/vendor/easycorp/easyadmin-bundle/src/Resources/views/default/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="134" selection-start-line="134" selection-end-line="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_pelotte/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>

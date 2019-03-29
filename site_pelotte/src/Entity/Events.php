@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,18 @@ class Events
      * @ORM\Column(type="text")
      */
     private $contenu;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Profil", mappedBy="event")
+     */
+    private $profils;
+
+    public function __construct()
+    {
+        $this->profils = new ArrayCollection();
+    }
+
+
 
 
 
@@ -104,6 +118,34 @@ class Events
     public function setContenu(string $contenu): self
     {
         $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Profil[]
+     */
+    public function getProfils(): Collection
+    {
+        return $this->profils;
+    }
+
+    public function addProfil(Profil $profil): self
+    {
+        if (!$this->profils->contains($profil)) {
+            $this->profils[] = $profil;
+            $profil->addEvent($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProfil(Profil $profil): self
+    {
+        if ($this->profils->contains($profil)) {
+            $this->profils->removeElement($profil);
+            $profil->removeEvent($this);
+        }
 
         return $this;
     }

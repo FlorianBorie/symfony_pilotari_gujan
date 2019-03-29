@@ -42,6 +42,18 @@ class SiteController extends AbstractController
         // Sent email
         $this->mailer->send($message);
     }
+    public function contacterEvenement(Events $events)
+    {
+        // New mail
+        $message = (new \Swift_Message('Inscription Evènement : '))
+            ->setFrom('noreply@pilotari_gujan.fr')
+            ->setTo('tototata33380@gmail.com')
+            ->setBody($this->renderView('site/contacter_evenement.html.twig', [
+                'Inscription' => $events
+            ]), 'text/html');
+        // Sent email
+        $this->mailer->send($message);
+    }
 
     public function envoiNewsletter(Newsletter $newsletter)
     {
@@ -196,13 +208,35 @@ class SiteController extends AbstractController
 
     /**
      * @Route("/event/{id}", name="event")
+     * @param $id
+     * @param ObjectManager $manager
+     * @return Response
      */
-    public function event($id)
+    public function event($id, Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
         $eventFromDatabase = $this->getDoctrine()->getRepository(Events::class)->find($id); // aller chercher les events dans la bdd
+        $profil = $this->getUser();
 
+        $form = $this->createFormBuilder()
+            ->add('Valider candidature', SubmitType::class)
+            ->getForm();
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            $eventFromDatabase -> addProfil($profil);
+
+            $this->contacterEvenement($eventFromDatabase);
+            $this->addFlash(
+                'notice',
+                'Votre demande a bien été envoyer'
+            );
+            $em->persist($eventFromDatabase);
+            $em->flush();
+        }
         return $this->render('site/event.html.twig', [
-        'event' => $eventFromDatabase
+            'event' => $eventFromDatabase,
+            'form' => $form->createView()
         ]);
     }
 }

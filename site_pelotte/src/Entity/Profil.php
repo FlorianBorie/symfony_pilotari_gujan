@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -55,6 +57,18 @@ class Profil implements UserInterface
      * @Assert\EqualTo(propertyPath="numLicence", message="Vous n'avez pas le même numero de licence")
      */
     private $licence;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Events", inversedBy="profils")
+     */
+    private $event;
+
+    public function __construct()
+    {
+        $this->event = new ArrayCollection();
+    }
+
+
 
 
     public function getId(): ?int
@@ -127,6 +141,32 @@ class Profil implements UserInterface
     public function setLicence(?Licence $licence): self
     {
         $this->licence = $licence;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Events[]
+     */
+    public function getEvent(): Collection
+    {
+        return $this->event;
+    }
+
+    public function addEvent(Events $event): self
+    {
+        if (!$this->event->contains($event)) {
+            $this->event[] = $event;
+        }
+
+        return $this;
+    }
+
+    public function removeEvent(Events $event): self
+    {
+        if ($this->event->contains($event)) {
+            $this->event->removeElement($event);
+        }
 
         return $this;
     }

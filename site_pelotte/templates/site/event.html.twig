@@ -4,6 +4,12 @@
         <h1 style="text-align: center">{{ event.titre }}</h1>
         <div>
             <p>{{ event.contenu }}</p>
+    {% if not app.user %}
+    {% else %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    {% endif %}
         </div>
     {% elseif event.type == 'competition' %}
         {{  event.titre }}

@@ -209,7 +209,8 @@ h1{
 }
 /*Footer*/
 .footer{
-    background-color: red;
+    background-color: #696969;
+    color: white;
     margin-top: 3%;
 }
 .col-md-4 {
@@ -304,4 +305,24 @@ h1{
 
 .fc-content:hover {
     cursor: pointer;
+}
+
+/*page event*/
+.img-fluid {
+    height: 100%;
+    width: 100%;
+}
+#image_evenement{
+    display: inline-block;
+    width: 300px;
+}
+#contenu_evenement{
+    width: 800px;
+    position: absolute;
+    left: 600px;
+    top: 300px;
+}
+
+#form_Valider candidature{
+    background-color: #AA3333;
 }

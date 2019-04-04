@@ -1,18 +1,60 @@
 {% extends 'base.html.twig.' %}
 {% block body %}
     {% if event.type == 'evenement' %}
-        <h1 style="text-align: center">{{ event.titre }}</h1>
-        <div>
-            <p>{{ event.contenu }}</p>
-    {% if not app.user %}
-    {% else %}
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    {% endif %}
+        <div class="container mt-5">
+            <div class="row">
+                {% for message in app.flashes('notice') %}
+                    <div class="alert alert-success col-12 mt-3">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+            <h1 style="text-align: center">{{ event.titre }}</h1>
+            <div class="row">
+                <div id="image_evenement" class="col-4">
+                    <img src="../img/upload/evenement_bbq.jpg" class="img-fluid" alt="image de l'évènement">
+                </div>
+                <div class="text-justify col-8">
+                    <p>{{ event.contenu }}</p>
+                    {% if not app.user %}
+                    {% else %}
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        {% if app.user.event == true %}
+                            <button type="submit" class="btn btn-primary">S'inscrire à l'évènement</button>
+                        {% else %}
+                        {% endif %}
+                        {{ form_end(form) }}
+                    {% endif %}
+                </div>
+            </div>
         </div>
-    {% elseif event.type == 'competition' %}
-        {{  event.titre }}
+    {% else %}
+        <div class="container mt-5">
+            <div class="row">
+                {% for message in app.flashes('notice') %}
+                    <div class="alert alert-success col-12 mt-3">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+            <h1 style="text-align: center">{{ event.titre }}</h1>
+            <div class="row">
+                <div id="image_evenement" class="col-4">
+                    <img src="../img/upload/evenement_bbq.jpg" class="img-fluid" alt="image de l'évènement">
+                </div>
+                <div class="text-justify col-8">
+                    <p>{{ event.contenu }}</p>
+                    {% if not app.user %}
+                    {% else %}
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <button type="submit" class="btn btn-primary">Valider la candidature</button>
+                        {{ form_end(form) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     {% endif %}
 {% endblock %}
 

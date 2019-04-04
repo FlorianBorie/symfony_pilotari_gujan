@@ -202,14 +202,13 @@ class SiteController extends AbstractController
 
             ];
         }
-
         return new JsonResponse($events);
     }
 
     /**
      * @Route("/event/{id}", name="event")
      * @param $id
-     * @param ObjectManager $manager
+     * @param Request $request
      * @return Response
      */
     public function event($id, Request $request)
@@ -219,7 +218,6 @@ class SiteController extends AbstractController
         $profil = $this->getUser();
 
         $form = $this->createFormBuilder()
-            ->add('Valider candidature', SubmitType::class)
             ->getForm();
 
         $form->handleRequest($request);

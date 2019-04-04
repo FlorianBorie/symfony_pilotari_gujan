@@ -68,9 +68,6 @@ class Profil implements UserInterface
         $this->event = new ArrayCollection();
     }
 
-
-
-
     public function getId(): ?int
     {
         return $this->id;
@@ -169,5 +166,10 @@ class Profil implements UserInterface
         }
 
         return $this;
+    }
+
+    public function __toString(): String
+    {
+        return $this->username;
     }
 }

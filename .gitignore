@@ -4,6 +4,6 @@ node_modules/
 fullcalendar-3.10.0/
 vendor/
 composer.lock/
-package-lock.json/
+./package-lock.json/
 .env/
 site_pelotte/\.env

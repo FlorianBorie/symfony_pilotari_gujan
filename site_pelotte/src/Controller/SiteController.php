@@ -58,7 +58,7 @@ class SiteController extends AbstractController
     public function envoiNewsletter(Newsletter $newsletter)
     {
         // New mail
-        $message = (new \Swift_Message('Demande newsletter: '))
+        $message = (new \Swift_Message('Demande newsletter : '))
             ->setFrom('noreply@pilotari_gujan.fr')
             ->setTo('tototata33380@gmail.com')
             ->setBody($this->renderView('site/contacter_newsletter.html.twig', [

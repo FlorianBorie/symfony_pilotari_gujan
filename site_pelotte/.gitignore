@@ -16,3 +16,11 @@ package-lock.json/
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
+site/
+node_modules/
+fullcalendar-3.10.0/
+vendor/
+composer.lock/
+./package-lock.json/
+.env/
+site_pelotte/\.env
